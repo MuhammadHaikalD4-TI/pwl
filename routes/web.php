@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,16 +20,8 @@ use App\Http\Controllers\HomeController;
 //     Route::get('/id/{id}', [HomeController::class, 'userByUserID']);
 //     });
 
-Route::get('/', function () {
-    echo "Selamat Datang";
-    });
+Route::get('/',  [HomesController::class, 'index']);
 
-Route::get('/about', function () {
-    echo "NIM : 1941720050";
-    echo "<br>";
-    echo "Nama : Muhammad Haikal Buldan";
-});
+Route::get('/about', [AboutController::class, 'about']);
 
-Route::get('/articles/{id}', function ($id) {
-    echo "Halaman Artikel dengan ID ".$id;
-});
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
