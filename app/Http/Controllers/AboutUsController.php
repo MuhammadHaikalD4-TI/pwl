@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AboutUsController extends Controller
 {
     function index() {
-        echo "Nama: Muhammad Haikal Buldan <br> NIM : 2141720080";
+        return view('pwl_3_1.about-us');
     }
 }

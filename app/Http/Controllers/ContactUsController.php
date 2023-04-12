@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ContactUsController extends Controller
 {
     public function index() {
-        echo "Ada yang bisa kami bantu ?";
+        return view('pwl_3_1.contact-us');
     }
 }
